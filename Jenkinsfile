@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label "worker-node"
+        label "node-worker"
     }
     stages {
         stage("Build Docker Image") {
