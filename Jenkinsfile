@@ -5,7 +5,7 @@ pipeline{
     stages{
         stage("make directory"){
             steps{
-              sh "echo "Building Docker Image..."
+              sh echo "Building Docker Image..."
               sh 'docker build -t jenkins1 .'
             }
         }
