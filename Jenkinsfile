@@ -1,17 +1,12 @@
-pipeline{
+pipeline {
     agent {
-        label "node-worker"
+        label "test-pipeline"
     }
-    stages{
-        stage("make directory"){
-            steps{
-                sh "mkdir ~/jenkins-pipelines || true"
-            }
-        }
-        stage("add some files"){
-            steps{
-                sh "touch ~/jenkins-pipelines/file.txt"
-                sh "ls -al"
+    stages {
+        stage("Build Docker Image") {
+            steps {
+                echo "Building Docker Image..."
+                sh 'docker build -t jenkins1 .'
             }
         }
     }
