@@ -13,7 +13,7 @@ pipeline {
 
                 sh 'docker rm -f $(docker ps -qa) || true'
 
-                  sh 'docker network create new-network || true'
+                  sh 'docker network create new-network1 || true'
 
             }
 
