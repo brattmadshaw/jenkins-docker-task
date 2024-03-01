@@ -3,9 +3,7 @@ Jenkinsfile:
  
 
 pipeline {
-    agent {
-        label "test-pipeline"
-    }
+    agent any
 
 
 
