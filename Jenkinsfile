@@ -14,6 +14,8 @@ pipeline {
 
             steps {
 
+                sh 'docker rm -f $(docker ps -qa) || true'
+
                   sh 'docker network create new-network || true'
 
             }
